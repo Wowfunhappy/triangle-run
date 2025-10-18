@@ -17,8 +17,8 @@ func _collided(body):
 		hide();
 		$Pivot/MeshInstance/Area/CollisionShape.set_deferred("disabled", true)
 		body.collectcheckpoint(body.translation);
-		canvas.get_node("ColorRect").visible = true;
-		canvas.get_node("AnimationPlayer").play("ScreenFlash");
+		#canvas.get_node("ColorRect").visible = true;
+		#canvas.get_node("AnimationPlayer").play("ScreenFlash");
 		
 		canvas.get_node("Message").text = "CHECKPOINT";
 		canvas.get_node("Message").visible = true;
