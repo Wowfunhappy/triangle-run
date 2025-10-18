@@ -293,8 +293,8 @@ func debugsection():
 	
 
 func randomizelevel():
-	debugsection();
-	return;
+	#debugsection();
+	#return;
 	
 	place("opening");
 	place("gap", 2);
