@@ -5,6 +5,7 @@ export var speed = 25
 # The downward acceleration when in the air, in meters per second squared.
 export var fall_acceleration = 75
 export var jumpforce = 20
+export var jump_release_gravity_multiplier = 2.5  # Extra gravity when jump button released
 var gravity = 0.98
 var y_velocity = 0;
 const MAX_FALL_SPEED = 30
@@ -12,6 +13,8 @@ const MAX_FALL_SPEED = 30
 var coyotetime = 0;
 var wait_for_land = false;
 var jumpqueued = 0;
+var is_jumping = false;  # Track if we're in a jump
+var jump_button_released = true;  # Track if button was released since last jump
 var lives = 3;
 var score = 0;
 var playermaterial = null;
@@ -140,6 +143,10 @@ func _physics_process(delta):
 				if coyotetime < 0:
 					coyotetime = 0;
 					
+		# Track button release to prevent auto-jump when holding
+		if !Input.is_action_pressed("jump"):
+			jump_button_released = true;
+
 		if Input.is_action_just_pressed("jump"):
 			jumpqueued = 0.1;
 		else:
@@ -147,18 +154,27 @@ func _physics_process(delta):
 				jumpqueued -= delta;
 				if jumpqueued < 0:
 					jumpqueued = 0;
-		
+
+		# Apply extra gravity when jump button released during upward movement
+		if is_jumping and y_velocity > 0 and !Input.is_action_pressed("jump"):
+			y_velocity -= gravity * (jump_release_gravity_multiplier - 1.0);
+
 		y_velocity -= gravity
 		#var just_jumped = false
-		if coyotetime > 0 and (jumpqueued > 0 or Input.is_action_pressed("jump")):
+		# Only allow jump if button was released since last jump OR using queued input
+		if coyotetime > 0 and (jumpqueued > 0 or (Input.is_action_pressed("jump") and jump_button_released)):
 			#just_jumped = true
 			coyotetime = 0;
 			y_velocity = jumpforce
-			
+			is_jumping = true;  # Start tracking jump
+			jump_button_released = false;  # Require release before next jump
+
 			$PlayerAudio/Jump.play();
 			$Pivot/AnimationPlayer.play("Jump");
+
 		if grounded and y_velocity <= 0:
 			y_velocity = -0.1
+			is_jumping = false;  # Reset jump state when landing
 		if y_velocity < -MAX_FALL_SPEED:
 			y_velocity = -MAX_FALL_SPEED
 			
