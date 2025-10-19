@@ -206,6 +206,7 @@ shape = SubResource( 9 )
 [node name="Camera" type="Camera" parent="CameraPivot"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0 )
 fov = 90.0
+far = 1000.0
 
 [node name="PlayerAudio" type="Node" parent="."]
 
