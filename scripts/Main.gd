@@ -267,34 +267,23 @@ func createlevel(intensity):
 
 func debugsection():
 	debuglevels = true;
-	
+
 	place("opening");
 	place("gap", 2);
 	place("checkpoint");
-	place("huge_easy");
+	placesection(floor_long[6], 22.4);  # Test long_13 (moving platforms)
 	place("gap", 2);
-	place("huge_easy");
+	placesection(floor_long[7], 22.4);  # Test long_14 (rotating plus signs)
 	place("gap", 2);
-	place("huge_easy");
+	placesection(floor_long[6], 22.4);  # Test long_13 (moving platforms)
 	place("gap", 2);
-	place("huge_easy");
-	place("gap", 2);
-	place("huge_easy");
-	place("gap", 2);
-	place("huge_easy");
-	place("gap", 2);
-	place("huge_easy");
-	place("gap", 2);
-	place("huge_easy");
-	place("gap", 2);
-	place("huge_easy");
-	place("gap", 2);
+	placesection(floor_long[7], 22.4);  # Test long_14 (rotating plus signs)
 	place("gap", 2);
 	
 
 func randomizelevel():
-	#debugsection();
-	#return;
+	debugsection();
+	return;
 	
 	place("opening");
 	place("gap", 2);
