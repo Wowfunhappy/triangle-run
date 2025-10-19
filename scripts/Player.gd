@@ -105,9 +105,6 @@ func _ready():
 	canvas = get_node("/root/").get_node("Main").get_node("CanvasLayer");
 	translation.z = -2;
 
-	# Hide player mesh for first-person view
-	$Pivot/TwirlPivot.visible = false;
-
 func _physics_process(delta):
 	updatecolor(delta);
 	if(moving):
@@ -128,6 +125,8 @@ func _physics_process(delta):
 		
 		if direction != Vector3.ZERO:
 			direction = direction.normalized()
+			$Pivot.look_at(translation + direction, Vector3.UP)
+		
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
 		velocity.y = y_velocity;
@@ -188,8 +187,7 @@ func _physics_process(delta):
 				wait_for_land = false;
 
 func lookatcamera():
-	# Not needed for first-person view
-	pass
+	$Pivot.look_at(translation + Vector3(0,0, PI/2), Vector3.UP);
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "Jump":
