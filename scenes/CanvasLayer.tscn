@@ -97,8 +97,8 @@ __meta__ = {
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
-margin_right = 640.0
-margin_bottom = 360.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -190,8 +190,8 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="QuitScreen"]
-margin_right = 640.0
-margin_bottom = 360.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0.709804 )
 __meta__ = {
 "_edit_use_anchors_": false
