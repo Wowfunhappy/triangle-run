@@ -134,7 +134,7 @@ tracks/0/keys = {
 
 [node name="Player" type="KinematicBody"]
 script = ExtResource( 1 )
-jump_release_gravity_multiplier = 3.75
+jump_release_gravity_multiplier = 4.0
 
 [node name="Pivot" type="Spatial" parent="."]
 
