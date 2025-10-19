@@ -38,11 +38,5 @@ shape = SubResource( 4 )
 [node name="ScoreThing" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.26741, 0 )
 
-[node name="ScoreThing2" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.26741, -5 )
-
-[node name="ScoreThing3" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.26741, -10 )
-
 [node name="ScoreThing4" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.69737, -23.9325 )

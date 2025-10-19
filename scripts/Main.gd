@@ -58,7 +58,7 @@ func restartgame():
 	player.currentcheckpoint = 0;
 	player.lastcheckpoint = 0;
 	player.score = 0;
-	player.lives = 3;
+	player.lives = 1;
 	personalbestunlocked = false;
 	player.moving = false;
 	player.updatelives();
@@ -355,6 +355,7 @@ func _ready():
 	
 	canvas = get_node("CanvasLayer");
 	spawnplayer();
+	player.updatelives();
 	player.lookatcamera();
 	player.moving = false;
 	cursor = 0;

@@ -15,7 +15,7 @@ var wait_for_land = false;
 var jumpqueued = 0;
 var is_jumping = false;  # Track if we're in a jump
 var jump_button_released = true;  # Track if button was released since last jump
-var lives = 3;
+var lives = 1;
 var score = 0;
 var playermaterial = null;
 var lastcolour = 0.0;
@@ -199,6 +199,11 @@ func collectscorething():
 	$PlayerAudio/Pickup.play();
 	score += 100;
 	updatescore();
+
+	# Add a life for each coin collected, up to max of 3
+	if lives < 3:
+		lives += 1;
+		updatelives();
 	
 func collectcheckpoint(checkpoint_position):
 	last_checkpoint_position = checkpoint_position;
