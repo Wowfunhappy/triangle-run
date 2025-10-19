@@ -139,7 +139,8 @@ custom_fonts/font = ExtResource( 3 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 2
-text = "TERRY CAVANAGH SEPT 2021 - FOR THE \"STOP WAITING FOR GOdOT\" JAM"
+text = "TERRY CAVANAGH SEPT 2021 - FOR THE \"STOP WAITING FOR GOdOT\" JAM
+TWEAKED BY WOWFUNHAPPY OCT 2025"
 align = 1
 valign = 1
 autowrap = true

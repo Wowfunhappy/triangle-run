@@ -32,7 +32,10 @@ var last_checkpoint_position = Vector3();
 var velocity = Vector3.ZERO
 
 func updatelives():
-	canvas.get_node("Lives").text = "Lives: " + str(lives)
+	if lives == 3:
+		canvas.get_node("Lives").text = "Lives: 3 (Max)"
+	else:
+		canvas.get_node("Lives").text = "Lives: " + str(lives)
 
 func updatecolor(delta):
 	if playermaterial == null:
