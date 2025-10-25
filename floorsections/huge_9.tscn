@@ -77,16 +77,6 @@ material/0 = SubResource( 3 )
 [node name="CollisionShape" type="CollisionShape" parent="Middle14/StaticBody"]
 shape = SubResource( 4 )
 
-[node name="Middle9" type="MeshInstance" parent="."]
-transform = Transform( -0.0858, -2.52211e-15, -6.46229e-07, 0, 1, -1.95827e-06, 6.81897e-09, -2.62268e-08, -6.72, 2.2, -1, -22.6 )
-mesh = SubResource( 1 )
-material/0 = SubResource( 3 )
-
-[node name="StaticBody" type="StaticBody" parent="Middle9"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Middle9/StaticBody"]
-shape = SubResource( 4 )
-
 [node name="Middle10" type="MeshInstance" parent="."]
 transform = Transform( -0.0858, -2.52211e-15, -6.46229e-07, 0, 1, -1.95827e-06, 6.81897e-09, -2.62268e-08, -6.72, 2.2, -1, -2.57202 )
 mesh = SubResource( 1 )
