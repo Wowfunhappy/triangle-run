@@ -3,7 +3,7 @@ extends Spatial
 var totaltime = 0;
 var initialy = 0;
 
-export var moverange = 100;
+export var moverange = 5.0;
 export var speed = 1.0;
 export var dir = 1;
 

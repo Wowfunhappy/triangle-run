@@ -29,7 +29,7 @@ script = ExtResource( 2 )
 moverange = 4
 
 [node name="Part" type="MeshInstance" parent="Spatial"]
-transform = Transform( 0.24, 0, 0, 0, 1, -9.79135e-07, 0, 1.74846e-08, 2.24, 0, -1, -8.4 )
+transform = Transform( 0.24, 0, 0, 0, 1, -9.79135e-07, 0, 1.74846e-08, 2.24, 0, -1, 0.360523 )
 mesh = SubResource( 1 )
 material/0 = SubResource( 3 )
 
@@ -51,19 +51,4 @@ material/0 = SubResource( 3 )
 [node name="StaticBody" type="StaticBody" parent="Spatial2/Part"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Spatial2/Part/StaticBody"]
-shape = SubResource( 4 )
-
-[node name="Spatial3" type="Spatial" parent="."]
-script = ExtResource( 2 )
-moverange = 4
-dir = -1
-
-[node name="Part" type="MeshInstance" parent="Spatial3"]
-transform = Transform( 0.24, 0, 0, 0, 1, -9.79135e-07, 0, 1.74846e-08, 2.24, 0, -1, 0.6 )
-mesh = SubResource( 1 )
-material/0 = SubResource( 3 )
-
-[node name="StaticBody" type="StaticBody" parent="Spatial3/Part"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Spatial3/Part/StaticBody"]
 shape = SubResource( 4 )

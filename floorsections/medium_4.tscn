@@ -28,7 +28,6 @@ material/0 = SubResource( 2 )
 transform = Transform( 0.4, 0, 0, 0, 1, 0, 0, 0, 2.8, 0, -1, -1.5 )
 script = ExtResource( 2 )
 moverange = 3
-dir = 1
 
 [node name="Part" type="MeshInstance" parent="MovingPlatform1"]
 mesh = SubResource( 1 )
@@ -43,7 +42,6 @@ shape = SubResource( 4 )
 transform = Transform( 0.18, 0, 0, 0, 1, 0, 0, 0, 2.8, 0, -1, -7.5 )
 script = ExtResource( 2 )
 moverange = 7
-dir = 1
 
 [node name="Part" type="MeshInstance" parent="MovingPlatformMiddle"]
 mesh = SubResource( 1 )

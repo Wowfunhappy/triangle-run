@@ -9,7 +9,7 @@ export var dir = 1;
 
 func _ready():
 	totaltime = 0;
-	initialx = $Part.translation.x;
+	initialx = translation.x;
 
 func _physics_process(delta):
 	totaltime += delta;

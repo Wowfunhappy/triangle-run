@@ -93,7 +93,11 @@ func placegap(size):
 func placesection(floorpiece, cursoroverride = 5.6):
 	var floorsection = floorpiece.instance();
 	floorsection.translation.z = cursor;
-	
+
+	# 50% chance to mirror horizontally
+	if randf() < 0.5:
+		floorsection.scale.x = -1
+
 	var maxlength = 0.0;
 	if(cursoroverride == 0):
 		#Figure out the length of the piece
@@ -143,9 +147,9 @@ func place(type, amount = 0.0):
 		"long":
 			placesection(pick(floor_long), 22.4);
 		"huge_easy":
-			placesection(pick(floor_huge_easy), 44.8);
+			placesection(pick(floor_huge_easy), 0);
 		"huge":
-			placesection(pick(floor_huge), 44.8);
+			placesection(pick(floor_huge), 0);
 
 
 func createlevel(intensity):
@@ -271,19 +275,14 @@ func debugsection():
 	place("opening");
 	place("gap", 2);
 	place("checkpoint");
-	placesection(floor_long[6], 22.4);  # Test long_13 (moving platforms)
+	placesection(floor_long[5], 86);
 	place("gap", 2);
-	placesection(floor_long[7], 22.4);  # Test long_14 (rotating plus signs)
-	place("gap", 2);
-	placesection(floor_long[6], 22.4);  # Test long_13 (moving platforms)
-	place("gap", 2);
-	placesection(floor_long[7], 22.4);  # Test long_14 (rotating plus signs)
-	place("gap", 2);
-	
+	place("opening");
+
 
 func randomizelevel():
-	debugsection();
-	return;
+	#debugsection();
+	#return;
 	
 	place("opening");
 	place("gap", 2);

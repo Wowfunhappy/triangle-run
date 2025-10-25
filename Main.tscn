@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://floorsections/FloorSection_001.tscn" type="PackedScene" id=2]
@@ -48,6 +48,7 @@
 [ext_resource path="res://floorsections/long_12.tscn" type="PackedScene" id=46]
 [ext_resource path="res://floorsections/long_13.tscn" type="PackedScene" id=47]
 [ext_resource path="res://floorsections/long_14.tscn" type="PackedScene" id=48]
+[ext_resource path="res://floorsections/huge_10.tscn" type="PackedScene" id=49]
 
 [sub_resource type="Animation" id=1]
 resource_name = "MusicFadeOut"
@@ -147,7 +148,7 @@ floor_medium = [ ExtResource( 38 ), ExtResource( 19 ), ExtResource( 39 ), ExtRes
 floor_long_easy = [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 20 ), ExtResource( 41 ) ]
 floor_long = [ ExtResource( 20 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ) ]
 floor_huge_easy = [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 36 ), ExtResource( 42 ) ]
-floor_huge = [ ExtResource( 25 ), ExtResource( 31 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 37 ) ]
+floor_huge = [ ExtResource( 25 ), ExtResource( 31 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 37 ), ExtResource( 49 ) ]
 floor_checkpoint = ExtResource( 18 )
 playerscene = ExtResource( 1 )
 

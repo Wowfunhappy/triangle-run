@@ -200,18 +200,19 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		
 func collectscorething():
 	$PlayerAudio/Pickup.play();
-	score += 100;
-	updatescore();
 
 	# Add a life for each coin collected, up to max of 3
 	if lives < 3:
 		lives += 1;
 		updatelives();
+	else:
+		# Only increase score if already at max lives
+		score += 100;
+		updatescore();
 	
 func collectcheckpoint(checkpoint_position):
 	last_checkpoint_position = checkpoint_position;
 	$PlayerAudio/Checkpoint.play();
-	score += 1000;
 	currentcheckpoint += 1;
 	if(lastcheckpoint - currentcheckpoint >= 2):
 		main.generatemore();
